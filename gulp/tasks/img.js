@@ -6,7 +6,7 @@ module.exports = function() {
 
     $.gulp.task('img:build', () => {
         return $.gulp.src('./app/img/**/*.{png,jpg,gif,ico}')
-            .pipe($.gp.tinypng('LQ__jb7d2I1ftsdkVe_SuqrcBpunG65S'))
+            .pipe($.gp.tinypng('YOUR_API_KEY'))
             .pipe($.gulp.dest('./build/img/'));
     });
 
