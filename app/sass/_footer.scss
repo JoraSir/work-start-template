@@ -1,0 +1,21 @@
+/*------------------------------------------ footer styles -------------------------------------------*/
+
+//------------------------------------------------------------layout
+.footer{
+    position: relative;
+    width: 100%;
+    flex-shrink: 0;
+    padding: 30px $gl_indent;
+    @include for-phone-only {
+        padding: 15px $mob_gl_indent;
+      }
+}
+.footer-main_row{
+    @include flex_block(row, nowrap, center, center, center);
+    min-height: $height_footer;
+    max-width: $page_width;
+    margin: 0 auto; 
+}
+//------------------------------------------------------------layout end
+
+/*----------------------------------------- footer styles end ------------------------------------------*/

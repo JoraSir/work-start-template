@@ -1,0 +1,45 @@
+/*----------------------------------------- main styles ------------------------------------------*/
+
+//------------------------------------------------------------layout
+.main{
+    width: 100%;
+    flex: 1 0 auto;
+}
+.section{
+    position: relative;
+    width: 100%;
+    padding: 0 $gl_indent;
+    @include for-phone-only {
+        padding: 0 $mob_gl_indent;
+      }
+}
+.section_row{
+    @include flex_block(column, nowrap, center, center, center);
+    max-width: $page_width;
+    margin: 0 auto;
+}
+//------------------------------------------------------------layout end
+
+.icon-css3,
+.icon-html5{
+    font-size: 3rem;
+    &.green_mod {
+        color:green;
+    }
+}
+
+
+.title{
+    position: relative;
+    font-size: 15rem;
+    font-family: "Corinthia";
+    font-weight: 500;
+    text-align: center;
+    color:#165016;
+    @include for-phone-only{
+        font-size: between(90px, 150px, $small, $phone-only);
+    }
+
+}
+
+/*----------------------------------------- main styles end ------------------------------------*/

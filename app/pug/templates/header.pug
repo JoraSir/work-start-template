@@ -1,0 +1,14 @@
+// header
+header.header
+    .top-line
+        .top-line_row
+            // logo
+            .logo_w
+                +logo_i('logo.svg','150')         
+            // top-menu
+            nav.nav-menu
+                ul.nav-menu_list
+                   each link,title in nav.navPages
+                        li.nav-menu_item
+                            a(href= link).nav-menu_link= title
+            +m-button

@@ -1,0 +1,119 @@
+// ------------------------------------------- breakpoints --------------------------------------------
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+@mixin for-desktop-down {
+  @media (max-width: 1799px) { @content; }
+}
+@mixin for-desktop-only {
+  @media (max-width: 1799px) and (min-width: 1200px) { @content; }
+}
+@mixin for-tablet-landscape-down {
+  @media (max-width: 1199px) { @content; }
+}
+@mixin for-tablet-landscape-only {
+  @media (max-width: 1199px) and (min-width: 900px) { @content; }
+}
+@mixin for-tablet-portrait-down {
+  @media (max-width: 899px) { @content; }
+}
+@mixin for-tablet-portrait-only {
+  @media (max-width: 899px) and (min-width: 600px) { @content; }
+}
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+
+// -------------------------------------------  end --------------------------------------------
+
+// ------------------------------------------- loader --------------------------------------------
+@mixin loader($url_file) {
+  .loader {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    background: none repeat scroll 0 0 #ffffff;
+    &:before{
+      content: '';
+      position: absolute;
+      height: 60px;
+      width: 60px;
+      margin-top: -30px;
+      margin-left: -30px;
+      left: 50%;
+      top: 50%;
+      background-image: url($url_file);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-color: #fff;
+    }
+  }
+}
+// -------------------------------------------  end --------------------------------------------
+
+//-------------------------------------------- flex_block ---------------------
+@mixin flex_block($flex-direction, $flex-wrap, $content, $align-items, $align-content){
+  display: flex;
+  flex-direction: $flex-direction;
+  flex-wrap: $flex-wrap;
+  justify-content: $content;
+  align-content: $align-content;
+  align-items: $align-items;
+}
+//--------------------------------------------- end ---------------------------
+
+//--------------------------------------------- overlay background color -----------
+@mixin overlay_bg($color){
+  position: relative;
+  z-index: 0;
+  &:before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    background-color: $color;
+  }
+};
+//---------------------------------------------- end-------------------------------
+
+
+//---------------------------------------------- font-face mixin ----------------------------------
+
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false ){
+  @font-face {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: $style;
+
+    @if $asset-pipeline == true {
+      src: url('#{$file-path}.eot');
+      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype');
+
+    } @else {
+      src: url('#{$file-path}.woff2') format('woff2'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype');
+
+    }
+  }
+}
+// -------------------------------------------------------- end ----------------------------------------------------
+
+
+//---------------------------------------------between size function------------------------------------------------
+
+@function between($to, $from, $toWidth, $fromWidth) {
+  $slope: ($to - $from) / ($toWidth - $fromWidth);
+  $base: $from - $slope * $fromWidth;
+
+  @return calc(#{$base} + #{100vw * $slope});
+}
+
+//---------------------------------------------between size function end---------------------------------------------

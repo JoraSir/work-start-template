@@ -1,0 +1,25 @@
+extends layouts/default
+include templates/_mixins
+
+block vars
+    - 
+          page = {
+          language: "ru",
+          name: 'home',
+          title: 'Start Template',
+          appTitle: 'Start Template',
+          description: 'Description of page'
+        }
+
+    
+block header
+    include templates/header
+
+block main
+    include pages/index/main
+
+block footer
+    include templates/footer
+
+    script(src = "js/libs.min.js")
+    script(src="js/common.js")

@@ -1,0 +1,16 @@
+@import "normalize";
+
+@import "helpers/mixins";
+@import "helpers/components"; // components styles 
+@import "variables";
+@import "libs";         // jQuery plugins styles
+
+@import "fonts";
+@import "base";
+@import "sprite";     // icons sprite styles
+@import "helpers/buttons_extends";    // buttons styles extends
+
+@import "header";
+@import "main";
+@import "footer";
+

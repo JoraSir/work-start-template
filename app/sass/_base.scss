@@ -1,0 +1,45 @@
+/*------------------------------------------- base styles ---------------------------------------------*/
+
+* {
+  box-sizing: border-box;
+  &:before,
+  &:after{
+    box-sizing: border-box;
+  }
+  word-wrap:break-word;
+}
+
+html{
+  height: 100%;
+  font: normal 10px $font_f_base;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100vh;
+  min-width:$page_min_width;
+  font-size:$font_size_base;
+  line-height:1.5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  color: $color_txt_base;
+  background: $body_bg;
+  overflow-x: hidden;
+}
+a {
+  outline: none;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+ol, ul,li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+/*------------------------------------------- base styles end --------------------------------------------*/

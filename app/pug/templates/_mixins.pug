@@ -1,0 +1,69 @@
+//-loader
+mixin loader()
+    .loader
+
+//- Use: +loader
+
+
+//-logo
+mixin logo(link)
+    a(href='#' title= page.title).logo=link
+//- Use: +logo(link)
+
+
+//-logo_img
+mixin logo_i(file_name,width)
+     a(href='#' title= page.title).logo
+            img(alt= page.title  src="img/" + file_name width=width)
+//- Use: +logo_i('file_name','width')
+
+
+//-menu
+mixin menu(className,classMod, ...links)
+    ul(class=className + "_list")
+        each link in links
+            li(class=className + "_item" class=classMod)
+                a(href="#", class=className + "_link")=link
+
+//- Use: +menu('className','classMod','link1' , 'link2' , 'link3' , 'link4',...)
+
+//-navmenu
+mixin navmenu(className, active_link, ...links)
+    nav(class=className)
+        ul(class=className + "_list")
+            li(class=className + "_item")
+                a(href="#", class=className + "_link" class=className + "_active")=active_link
+            each link in links
+                li(class=className + "_item")
+                    a(href="#", class=className + "_link")=link
+//- Use: +navmenu('className', 'active_link','link2' , 'link3' , 'link4' , 'link5',...)
+
+
+//-img+wrap
+mixin img_w(alt, class_name, file_name)
+    div(class=class_name +"_i_w")
+        img(alt=alt class=class_name + "_i" src="img/"+file_name)
+//- Use: +img_w('alt','class_name','file_name')
+
+
+//-Svg_sprite icon
+mixin icon(name,mod)
+    - mod = mod || ''
+    svg(class="icon icon-" + name + ' ' + mod)
+        use(xlink:href="icons/sprite/sprite.svg#" + name)
+//- Use: +icon('icon_name','class_mod')
+
+//-m_button
+mixin m-button()
+    a(href="#" id="menuButton").menu-button
+        span.burger-icon
+//- Use: +m_button
+
+//-nav-menu multi-page
+mixin nav-menu(className)
+    nav(class=className)
+        ul(class=className + "_list")
+                each i in nav
+                    li(class=className + "_item")
+                        a(class=className + "_link" href=i.url)=i.name
+//- Use: +nav-menu('className');            
