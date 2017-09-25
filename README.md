@@ -1,13 +1,13 @@
-#Стартовый шаблон v.2.0.0
+# Стартовый шаблон v.2.0.0
 
--gulp 4;
--pug;
--sass;
--SVG-sprite;
+* gulp 4;
+* pug;
+* sass;
+* SVG-sprite;
 
-Build:
--Minify CSS + CSScomb
--image compression (tinypng_api or imagemin);
+## Build:
+* Minify CSS + CSScomb
+* image compression (tinypng_api or imagemin);
 
 Запуск шаблона:
 

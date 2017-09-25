@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     $(window).load(function() {
-        $(".loader").delay(400).fadeOut("slow");
+        $(".loader").delay(200).fadeOut("slow");
     });
 
     svg4everybody({});
