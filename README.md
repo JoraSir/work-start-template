@@ -11,6 +11,6 @@
 
 Запуск шаблона:
 
-1. git clone https://github.com/JoraSir/work-start-temlate
+1. git clone https://github.com/JoraSir/work-start-template
 2. npm i
 3. gulp
