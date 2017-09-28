@@ -10,23 +10,28 @@ module.exports = function() {
             .pipe($.gulp.dest('./build/img/'));
     });
 
-
-
+   
     $.gulp.task('images:build', () => {
         return $.gulp.src('./app/img/**/*') 
-            .pipe($.gp.cache($.gp.imagemin([ 
-                $.gp.imagemin.gifsicle({interlaced: true}),
-                $.gp.imagemin.jpegtran({progressive: true}),
-                $.gp.imagemin.optipng({optimizationLevel: 5}),
-                $.gp.imagemin.svgo({
-                    plugins: [
-                        {removeViewBox: true},
-                        {cleanupIDs: false}
-                    ]
-                }),
-            ])))
+            .pipe($.gp.image({
+                pngquant: true,
+                optipng: false,
+                zopflipng: true,
+                advpng: true,
+                jpegRecompress: true,
+                jpegoptim: false,
+                mozjpeg: true,
+                gifsicle: true,
+                svgo: {
+                    enable: ['removeViewBox'], 
+                    disable: ['cleanupIDs']
+                },
+                concurrent: 10
+
+            }))
             .pipe($.gulp.dest('./build/img')); 
     });
+
 
     $.gulp.task('svg:copy', () => {
         return $.gulp.src('./app/img/*.svg')
