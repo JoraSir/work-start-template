@@ -1,13 +1,13 @@
 //----------button size extends
 %butt_size_1 {
-  height: 5rem;
-  line-height: 5rem;
+  padding: 1em 2em;
   text-align: center;
   font-family: $font_f_base;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   border: none;
   display: inline-block;
   white-space: nowrap;
+  border-radius: .4em;
 }
 
 //----------button color extends
@@ -17,6 +17,7 @@
   transition: all .3s ease;
   &:hover, &:focus {
     text-decoration: none;
+    outline: none;
   }
   &:hover {
     background: darken($color_btn_bg_1, 5%);

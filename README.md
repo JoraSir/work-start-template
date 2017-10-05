@@ -4,10 +4,11 @@
 * pug;
 * sass;
 * SVG-sprite;
+* button sass-extendet;
 
 ## Build:
 * Minify CSS + CSScomb
-* image compression (tinypng_api or imagemin);
+* image compression (tinypng_api or gulp-image);
 
 Запуск шаблона:
 

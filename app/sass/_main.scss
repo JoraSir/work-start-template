@@ -28,6 +28,10 @@
     }
 }
 
+.button{
+    @extend %butt_size_1;
+    @extend %butt_color_1;
+}
 
 .title{
     position: relative;
