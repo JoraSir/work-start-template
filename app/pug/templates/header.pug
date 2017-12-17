@@ -4,14 +4,13 @@ header.header
         .top-line_row
             // logo
             .logo_w
-                +logo_i('logo.svg','150')         
+                +logo_i('logo.svg','120')         
             // top-menu
-            nav.nav-menu
-                ul.nav-menu_list
-                   each link,title in nav.navPages
-                        li.nav-menu_item
-                            a(href= link).nav-menu_link= title
+            +navmenu
             // widgets-block
             .widgets_w
                 +lang_widget
                 +m-button
+    .header_row            
+        h1.header_title New title
+        button.button GO!            
