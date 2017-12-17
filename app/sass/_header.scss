@@ -95,6 +95,7 @@
     background-color: #fafafa;
     border: 1px solid #ccc;
     border-radius: 3px;
+    vertical-align: middle;
   }
 
   .burger-icon {
@@ -113,5 +114,20 @@
 
 //------------------------------------------------------------ burger_button end
 
-
+//------------------------------------------------------------ language_widget
+.language{
+  &_list{
+    display: inline-block;
+    vertical-align:middle;
+    margin-right: 20px;
+  }
+  &_item{
+    display: inline-block;
+    
+  }
+  &_link{
+    display:block;
+  }
+}
+//------------------------------------------------------------ language_widget end
 /*--------------------------------------- header styles end --------------------------------------------*/

@@ -7,7 +7,7 @@
 * button sass-extendet;
 
 ## Build:
-* Minify CSS + CSScomb
+* Minify CSS + CSScomb;
 * image compression (tinypng_api or gulp-image);
 
 Запуск шаблона:

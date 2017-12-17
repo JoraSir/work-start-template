@@ -67,3 +67,11 @@ mixin nav-menu(className)
                     li(class=className + "_item")
                         a(class=className + "_link" href=i.url)=i.name
 //- Use: +nav-menu('className');            
+
+//- language_wiget
+mixin lang_widget()
+    ul.language_list
+        each title,name in nav.language
+            li.language_item
+                a(href="#" title= title).language_link= name
+//- Use: +language;                
