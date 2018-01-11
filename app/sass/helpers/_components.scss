@@ -1,1 +1,51 @@
-@import "../../libs/sass-burger/_burger.scss"; // burger button
+//------------------------------------------------------------ loader 
+@include loader("../img/loader.svg");
+//------------------------------------------------------------ loader end
+
+//------------------------------------------------------------ language_widget
+.language{
+    &_list{
+      display: inline-block;
+      vertical-align:middle;
+      margin-right: 20px;
+    }
+    &_item{
+      display: inline-block;
+      
+    }
+    &_link{
+      display:block;
+    }
+  }
+  //------------------------------------------------------------ language_widget end
+  
+  //------------------------------------------------------------ social_widget
+  
+
+.social{
+  &_list{
+    position: relative;
+    display: inline-block;
+    vertical-align:middle;
+  }
+  &_item{
+    display: inline-block;
+  }
+  &_link{
+    display:block;
+    cursor: pointer;
+    .icon{
+        &-vk,
+        &-facebook,
+        &-google,
+        &-instagram{
+            font-size: 2rem;
+            vertical-align: middle;
+        }
+      }
+  }
+}
+
+
+
+//------------------------------------------------------------ social_widget end

@@ -1,5 +1,4 @@
-/*----------------------------------------------- loader -----------------------------------------*/
-@include loader("../img/loader.svg");
+
 
 /*---------------------------------------------- header styles -----------------------------------------*/
 
@@ -21,7 +20,6 @@
 
 //------------------------------------------------------------ top_line
 .top-line{
-  position:fixed;
   width: 100%;
   padding: 0 $gl_indent;
   @include for-phone-only {
@@ -121,22 +119,6 @@
 
 //------------------------------------------------------------ burger_button end
 
-//------------------------------------------------------------ language_widget
-.language{
-  &_list{
-    display: inline-block;
-    vertical-align:middle;
-    margin-right: 20px;
-  }
-  &_item{
-    display: inline-block;
-    
-  }
-  &_link{
-    display:block;
-  }
-}
-//------------------------------------------------------------ language_widget end
 
 .button{
   @extend %butt_size_1;

@@ -69,7 +69,18 @@ mixin nav-menu(className)
 //- language_wiget
 mixin lang_widget()
     ul.language_list
-        each title,name in nav.language
+        each object in nav.language_widget
             li.language_item
-                a(href="#" title= title).language_link= name
-//- Use: +language;                
+                a(href= object['link'] title= object['title']).language_link=object['name']
+                    
+//- Use: +lang_widget; 
+
+//- social_wiget
+mixin social_widget()
+    ul.social_list
+        each object in nav.social_widget
+            li.social_item
+                a(href= object['link'] title= object['title']).social_link
+                    svg(class="icon icon-" + object['icon'])
+                        use(xlink:href="icons/sprite/sprite.svg#" + object['icon'])
+//- Use: +social_widget();                

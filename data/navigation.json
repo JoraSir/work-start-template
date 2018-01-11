@@ -5,8 +5,39 @@
     "Каталог" : "#"
   },
 
-  "language": {
-    "rus" : "Русский", 
-    "ukr" : "Українська"
+  "language_widget": {
+    "Русский" : {
+      "name" :"ru",
+      "link" : "#",
+      "title" : "Русский"
+     },
+     "Українська" : {
+      "name" :"ukr",
+      "link" : "#",
+      "title" : "Українська"
+     }
+  },
+
+  "social_widget": {
+    "instagram" : {
+     "title" :"Instagram",
+     "link" : "#",
+     "icon" : "instagram"
+    },
+    "facebook" : {
+      "title" :"Facebook",
+      "link" : "#",
+      "icon" : "facebook"
+    },
+    "vk" : {
+      "title" :"Vkontakte",
+      "link" : "#",
+      "icon" : "vk"
+    },
+    "google" : {
+      "title" :"Google Plus",
+      "link" : "#",
+      "icon" : "google"
+     }
   }
 }
