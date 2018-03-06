@@ -15,6 +15,11 @@
       "name" :"ukr",
       "link" : "#",
       "title" : "Українська"
+     },
+     "English" : {
+      "name" :"en",
+      "link" : "#",
+      "title" : "English"
      }
   },
 

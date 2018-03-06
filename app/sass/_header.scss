@@ -100,7 +100,8 @@
     background-color: #fafafa;
     border: 1px solid #ccc;
     border-radius: 3px;
-    vertical-align: middle;
+    position: absolute;
+    right: 0;top: 16px;
   }
 
   .burger-icon {

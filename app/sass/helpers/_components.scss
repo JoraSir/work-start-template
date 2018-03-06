@@ -2,6 +2,9 @@
 @include loader("../img/loader.svg");
 //------------------------------------------------------------ loader end
 
+.widgets_w{
+  @include for-tablet-portrait-down {margin-right: 50px;}
+}
 //------------------------------------------------------------ language_widget
 .language{
     &_list{
@@ -49,3 +52,4 @@
 
 
 //------------------------------------------------------------ social_widget end
+
