@@ -14,13 +14,13 @@ module.exports = function() {
     $.gulp.task('images:build', () => {
         return $.gulp.src('./app/img/**/*') 
             .pipe($.gp.image({
-                pngquant: true,
-                optipng: false,
+                pngquant: false,
+                optipng: true,
                 zopflipng: true,
                 advpng: true,
                 jpegRecompress: true,
-                jpegoptim: false,
-                mozjpeg: true,
+                jpegoptim: true,
+                mozjpeg: false,
                 gifsicle: true,
                 svgo: {
                     enable: ['removeViewBox'], 
