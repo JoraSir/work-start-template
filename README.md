@@ -8,7 +8,7 @@
 
 ## Build:
 * Minify CSS + CSScomb;
-* image compression (tinypng_api or gulp-image);
+* image compression (tinypng_api or gulp-imagemin);
 
 Запуск шаблона:
 
