@@ -13,22 +13,15 @@ module.exports = function() {
    
     $.gulp.task('images:build', () => {
         return $.gulp.src('./app/img/**/*') 
-            .pipe($.gp.image({
-                pngquant: false,
-                optipng: true,
-                zopflipng: true,
-                advpng: true,
-                jpegRecompress: true,
-                jpegoptim: true,
-                mozjpeg: false,
-                gifsicle: true,
-                svgo: {
-                    enable: ['removeViewBox'], 
-                    disable: ['cleanupIDs']
-                },
-                concurrent: 10
-
-            }))
+        .pipe($.gp.imagemin([
+            $.gp.imagemin.gifsicle({interlaced: true}),
+            $.gp.imagemin.jpegtran({progressive: true}),
+            $.imageminJpegRecompress({loops: 1, quality: "low"}),
+            $.gp.imagemin.svgo({removeViewBox: true}),
+            $.gp.imagemin.optipng({optimizationLevel: 5}),
+            $.pngquant({quality: "65-70", speed: 5})
+        ]))
+            
             .pipe($.gulp.dest('./build/img')); 
     });
 

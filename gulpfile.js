@@ -6,6 +6,8 @@ global.$ = {
     del: require('del'),
     fs: require('fs'),
     browserSync: require('browser-sync').create(),
+    pngquant: require('imagemin-pngquant'),
+    imageminJpegRecompress: require('imagemin-jpeg-recompress'),
     gp: require('gulp-load-plugins')()
 };
 
