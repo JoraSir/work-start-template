@@ -5,15 +5,15 @@ module.exports = function () {
                 'include css': true
             }))
             .pipe($.gp.autoprefixer({
-                browsers: ['last 3 version']
+                overrideBrowserslist: ['last 3 version']
             }))
             .pipe($.gp.csscomb())
             .pipe($.gp.csso())
-            .pipe($.gulp.dest('./build/css/'))
+            .pipe($.gulp.dest('./dist/build/css/'))
     });
 
     $.gulp.task('styles:dev', () => {
-        return $.gulp.src('app/sass/**/*.+(scss|sass)')
+        return $.gulp.src('./app/sass/**/*.+(scss|sass)')
             .pipe($.gp.sourcemaps.init())
             .pipe($.gp.sass({
                 'include css': true
@@ -26,9 +26,9 @@ module.exports = function () {
             }))
             .pipe($.gp.sourcemaps.write())
             .pipe($.gp.autoprefixer({
-                browsers: ['last 3 version']
+                overrideBrowserslist: ['last 3 version']
             }))
-            .pipe($.gulp.dest('./build/css/'))
+            .pipe($.gulp.dest('./dist/build/css/'))
             .pipe($.browserSync.reload({
                 stream: true
             }));

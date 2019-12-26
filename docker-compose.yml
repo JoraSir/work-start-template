@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  wst:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: npm run build
+    environment:
+      NODE_ENV: production
+    ports:
+      - target: 3000
+        published: 3000
+        protocol: tcp
+        mode: host
+    volumes:
+      - .:/home/app/app
+      - ./dist:/home/app/app/dist
+      - ./node_modules:/home/app/app/node_modules
+      - ./package.json:/home/app/app/package.json
+      - ./gulpfile.js:/home/app/app/gulpfile.js
+    

@@ -1,4 +1,4 @@
-# Стартовый шаблон v.2.0.0
+# Стартовый шаблон v.3.0.0
 
 * gulp 4;
 * pug;
@@ -13,5 +13,8 @@
 Запуск шаблона:
 
 1. git clone https://github.com/JoraSir/work-start-template
-2. npm i
-3. gulp
+2. docker-compose build --no-cache
+3. docker-compose run wst npm install
+4. docker-compose up (/down)
+
+
